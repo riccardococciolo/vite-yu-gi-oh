@@ -1,6 +1,7 @@
 <script>
 import axios from "axios";
 import { store } from "./store.js";
+import AppHeader from './components/AppHeader.vue'
 
 export default {
   data() {
@@ -15,13 +16,13 @@ export default {
         this.store.cards = resp.data;
     });
   },
-  components: {},
+  components: { AppHeader},
 }
 
 </script>
 
 <template>
-
+  <AppHeader />
 </template>
 
 <style lang="scss">
