@@ -16,7 +16,10 @@ export default {
 <template>
     <div>
         <div class="container p-4">
-            <div class="bg-white p-4">
+            <div v-if="store.loading">
+                <h2>La pagina sta caricando...</h2>
+            </div>
+            <div class="bg-white p-4" v-else>
                 <CardsStats />
                 <div class="row row-cols-5 g-4">
                     <div class="col" v-for="character in store.cards" :key="character.id">
